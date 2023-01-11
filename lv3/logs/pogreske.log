@@ -1,0 +1,12 @@
+2022-11-11 19:50:46,190 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:36] [33mPokušaj otključavanja automobila s ključem 4z3g99 koristeći ključ 4z3g99.[0;39m 
+2022-11-11 19:50:46,195 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:41] [33mUspješno otključan automobil![0;39m 
+2022-11-11 19:50:46,196 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:36] [33mPokušaj otključavanja automobila s ključem 4z3g99 koristeći ključ gt4i3f.[0;39m 
+2022-11-11 19:50:46,197 [1;31m[ERROR][0;39m [main] h.j.v.Automobil [Automobil.java:44] [33mKljuč gt4i3f ne odgovara automobilu![0;39m 
+2022-11-11 19:50:46,197 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:53] [33mMjerenje temperature motora[0;39m 
+2022-11-11 19:50:46,197 [1;31m[ERROR][0;39m [main] h.j.v.Automobil [Automobil.java:63] [33mMotor je prekuhao (117°C)![0;39m 
+2023-01-11 16:05:34,522 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:36] [33mPokušaj otključavanja automobila s ključem 4z3g99 koristeći ključ 4z3g99.[0;39m 
+2023-01-11 16:05:34,525 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:41] [33mUspješno otključan automobil![0;39m 
+2023-01-11 16:05:34,526 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:36] [33mPokušaj otključavanja automobila s ključem 4z3g99 koristeći ključ gt4i3f.[0;39m 
+2023-01-11 16:05:34,526 [1;31m[ERROR][0;39m [main] h.j.v.Automobil [Automobil.java:44] [33mKljuč gt4i3f ne odgovara automobilu![0;39m 
+2023-01-11 16:05:34,526 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:53] [33mMjerenje temperature motora[0;39m 
+2023-01-11 16:05:34,538 [34m[INFO][0;39m [main] h.j.v.Automobil [Automobil.java:58] [33mNormalna tTemperatura motora (93°C).[0;39m 
