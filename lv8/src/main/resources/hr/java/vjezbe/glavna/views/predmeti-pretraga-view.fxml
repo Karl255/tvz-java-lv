@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.glavna.controllers.PredmetiPretragaController">
+	<columnConstraints>
+		<ColumnConstraints percentWidth="60.0" />
+		<ColumnConstraints percentWidth="40.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints vgrow="NEVER" />
+		<RowConstraints vgrow="ALWAYS" />
+	</rowConstraints>
+	<fx:include source="izbornik-view.fxml" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+
+	<GridPane hgap="8.0" vgap="8.0" GridPane.rowIndex="1">
+		<columnConstraints>
+			<ColumnConstraints hgrow="SOMETIMES" percentWidth="34.0" />
+			<ColumnConstraints hgrow="SOMETIMES" percentWidth="33.0" />
+			<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.0" prefWidth="100.0" />
+		</columnConstraints>
+		<rowConstraints>
+			<RowConstraints vgrow="NEVER" />
+			<RowConstraints vgrow="NEVER" />
+			<RowConstraints vgrow="NEVER" />
+			<RowConstraints vgrow="NEVER" />
+			<RowConstraints vgrow="NEVER" />
+			<RowConstraints vgrow="NEVER" />
+			<RowConstraints vgrow="ALWAYS" />
+		</rowConstraints>
+
+		<style>
+			-fx-padding: 8px;
+		</style>
+
+		<Label text="Pretraživanje predmeta" textAlignment="CENTER" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+			<style>
+				-fx-font-size: 18px;
+				-fx-font-weight: bold;
+			</style>
+		</Label>
+
+		<Label text="Šifra" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+		<TextField fx:id="sifraUnos" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+		<Label text="Naziv" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+		<TextField fx:id="nazivUnos" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+		<Label text="Broj ECTS bodova" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+		<TextField fx:id="brojEctsBodovaUnos" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+		<Label text="Nositelj" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+		<!--<TextField fx:id="nositeljUnos" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4"/>-->
+		<ChoiceBox fx:id="nositeljUnos" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+		
+		<Label text="Broj studenata" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+		<TextField fx:id="brojStudenataUnos" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+		<TableView fx:id="predmetTableView" GridPane.columnSpan="3" GridPane.rowIndex="6">
+			<columns>
+				<TableColumn fx:id="sifraColumn" prefWidth="75.0" text="Šifra" />
+				<TableColumn fx:id="nazivColumn" prefWidth="125.0" text="Naziv" />
+				<TableColumn fx:id="brojEctsBodovaColumn" prefWidth="50.0" text="ECTS" />
+				<TableColumn fx:id="nositeljColumn" prefWidth="175.0" text="Nositelj" />
+				<TableColumn fx:id="brojStudenataColumn" prefWidth="100.0" text="Broj upisanih" />
+			</columns>
+		</TableView>
+
+		<Button maxWidth="1.7976931348623157E308" onAction="#pretrazi" text="Traži" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+		<Button maxWidth="1.7976931348623157E308" onAction="#delete" text="Obriši" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+		<Button maxWidth="1.7976931348623157E308" onAction="#update" text="Ažuriraj" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+		<Button maxWidth="1.7976931348623157E308" onAction="#addImage" text="Unos slike" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+	</GridPane>
+	<GridPane hgap="8.0" vgap="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+		<columnConstraints>
+			<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		</columnConstraints>
+		<rowConstraints>
+			<RowConstraints vgrow="ALWAYS" />
+			<RowConstraints minHeight="-Infinity" vgrow="NEVER" />
+		</rowConstraints>
+		
+		<ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="2" />
+		<Button onAction="#previousImage" text="&lt;" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+		<Button onAction="#nextImage" text="&gt;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+		
+		<padding>
+			<Insets bottom="8.0" right="8.0" top="8.0" />
+		</padding>
+	</GridPane>
+</GridPane>
